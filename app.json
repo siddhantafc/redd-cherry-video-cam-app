@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Red Cherry Live Video Cam",
-    "slug": "redcherry",
+    "name": "Redd Cherry Live Video Cam",
+    "slug": "reddcherry",
     "icon": "./app/assets/images/icon-fc-512.webp",
     "version": "1.211.1025_beta",
     "orientation": "portrait",
@@ -18,7 +18,7 @@
         "NSCameraUsageDescription": "This app needs access to camera for video calls",
         "NSMicrophoneUsageDescription": "This app needs access to microphone for voice and video calls"
       },
-      "bundleIdentifier": "com.redcherry.redcherrylivevideocam"
+      "bundleIdentifier": "com.reddcherry.reddcherrylivevideocam"
     },
     "android": {
       "edgeToEdgeEnabled": true,
@@ -34,7 +34,7 @@
         "android.permission.INTERNET",
         "android.permission.ACCESS_NETWORK_STATE"
       ],
-      "package": "com.redcherry.redcherrylivevideocam"
+      "package": "com.reddcherry.reddcherrylivevideocam"
     }
   }
 }

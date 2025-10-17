@@ -8,10 +8,10 @@ import {
   Linking,
 } from "react-native";
 import {
-  Lightning,
+  Coins,
   Timer,
   ArrowRight,
-  CrownSimple,
+  Crown,
   WhatsappLogo,
 } from "phosphor-react-native";
 import AuthenticatedScreenWrapper from "../../../../components/AuthenticatedScreenWrapper";
@@ -229,13 +229,13 @@ const UserRecharge = () => {
                         className={`w-12 h-12 rounded-full items-center justify-center ${isPremium ? "bg-amber-100" : "bg-purple-50"}`}
                       >
                         {isPremium ? (
-                          <CrownSimple
+                          <Crown
                             size={24}
                             color="#f59e0b"
                             weight="duotone"
                           />
                         ) : (
-                          <Lightning
+                          <Coins
                             size={24}
                             color="#6366f1"
                             weight="duotone"

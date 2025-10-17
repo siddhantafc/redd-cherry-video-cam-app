@@ -1,4 +1,4 @@
-package com.redcherry.redcherrylivevideocam
+package com.reddcherry.reddcherrylivevideocam
 
 import android.os.Build
 import android.os.Bundle

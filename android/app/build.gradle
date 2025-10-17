@@ -117,9 +117,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.redcherry.redcherrylivevideocam'
+    namespace 'com.reddcherry.reddcherrylivevideocam'
     defaultConfig {
-        applicationId 'com.redcherry.redcherrylivevideocam'
+    applicationId 'com.reddcherry.reddcherrylivevideocam'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode autoVersionCode

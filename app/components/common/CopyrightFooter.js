@@ -29,7 +29,7 @@ const CopyrightFooter = ({
       />
       <View>
         <Text className="text-xs text-gray-700" style={textStyle}>
-          Copyright © 2025 Friends Club.
+          Copyright © 2025 Redd Cherry.
         </Text>
         <Text className=" text-xs text-gray-700" style={textStyle}>
           All Rights Reserved.
