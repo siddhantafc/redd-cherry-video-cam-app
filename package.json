@@ -1,0 +1,51 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "icons:android": "node scripts/generate_android_icons.mjs ./app/assets/images/icon-fc-512.webp"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-native-community/datetimepicker": "^8.4.4",
+    "@react-native-picker/picker": "^2.11.2",
+    "@react-navigation/native": "^7.1.17",
+    "@react-navigation/native-stack": "^7.3.26",
+    "expo": "~53.0.22",
+    "expo-av": "^16.0.7",
+    "expo-document-picker": "^14.0.7",
+    "expo-file-system": "^17.0.1",
+    "expo-image-manipulator": "^14.0.7",
+    "expo-image-picker": "^17.0.8",
+    "expo-screen-capture": "^8.0.8",
+    "expo-status-bar": "~2.2.3",
+    "expo-video-thumbnails": "^10.0.7",
+    "nativewind": "^2.0.11",
+    "phosphor-react-native": "^3.0.0",
+    "react": "19.0.0",
+    "react-native": "0.79.6",
+    "react-native-agora": "^4.5.3",
+    "react-native-dotenv": "^3.4.11",
+    "react-native-gesture-handler": "^2.28.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-modal-datetime-picker": "^18.0.0",
+    "react-native-permissions": "^5.4.2",
+    "react-native-razorpay": "^2.3.0",
+    "react-native-safe-area-context": "^5.6.1",
+    "react-native-screens": "^4.16.0",
+    "react-native-svg": "^15.13.0",
+    "react-native-toast-message": "^2.3.3",
+    "socket.io-client": "^4.8.1",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "expo-module-scripts": "^5.0.7",
+    "sharp": "^0.34.4"
+  },
+  "private": true
+}

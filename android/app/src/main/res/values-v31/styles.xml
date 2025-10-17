@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ Splash Screen customization -->
+    <style name="Theme.App.SplashScreen" parent="AppTheme">
+        <!-- System-controlled splash (Android 12+) -->
+        <item name="android:windowSplashScreenBackground">@color/splash_bg</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/friends_club_splash</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/splash_bg</item>
+        <item name="android:windowSplashScreenAnimationDuration">0</item>
+    </style>
+</resources>
