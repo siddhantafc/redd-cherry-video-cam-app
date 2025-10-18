@@ -125,6 +125,22 @@ android {
         versionCode autoVersionCode
         versionName expoVersion
     }
+    // Define product flavors to build separate APKs for Hosts and Users
+    flavorDimensions "role"
+    productFlavors {
+        host {
+            dimension "role"
+            // Distinct applicationId so both APKs can be installed side-by-side
+            applicationId "com.reddcherry.host"
+            // App name override for this flavor
+            resValue "string", "app_name", "Redd Cherry Host"
+        }
+        user {
+            dimension "role"
+            applicationId "com.reddcherry.user"
+            resValue "string", "app_name", "Redd Cherry"
+        }
+    }
     signingConfigs {
         debug {
             storeFile file('debug.keystore')

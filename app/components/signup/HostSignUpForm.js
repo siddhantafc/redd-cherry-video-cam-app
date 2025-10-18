@@ -144,7 +144,7 @@ const HostSignUpForm = ({
         className="mb-6"
       >
         <Text className="text-black text-sm">
-          Already have an account? <Text className="text-primary underline">Sign in</Text>
+          Already have an account? <Text className="text-pink-500 underline">Sign in</Text>
         </Text>
       </TouchableOpacity>
       <Text className="self-start mb-1 ml-1 text-gray-600 font-sm">Name</Text>

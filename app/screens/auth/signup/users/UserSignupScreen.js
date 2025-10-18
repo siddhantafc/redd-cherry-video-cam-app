@@ -87,7 +87,7 @@ export default function UserSignupScreen({ navigation }) {
       />
       <Text className="text-3xl font-bold text-primary mb-2">User Sign Up</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Login')} className="mb-6">
-        <Text className="text-primary text-base">Already have an account? <Text className="underline">Sign in</Text></Text>
+        <Text className="text-primary text-base">Already have an account? <Text className="text-pink-500 underline">Sign in</Text></Text>
       </TouchableOpacity>
       <TextInput
         className="w-full mb-4 px-4 py-3 border border-gray-200 rounded-lg bg-gray-50 text-base text-gray-900"

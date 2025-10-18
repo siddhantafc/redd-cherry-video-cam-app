@@ -7,7 +7,15 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "icons:android": "node scripts/generate_android_icons.mjs ./app/assets/images/icon-fc-512.webp"
+    "icons:android": "node scripts/generate_android_icons.mjs ./app/assets/images/icon-fc-512.webp",
+    "icons:android:host": "node scripts/generate_android_icons.mjs ./app/assets/images/icon-fc-512.webp --flavor host",
+    "icons:android:user": "node scripts/generate_android_icons.mjs ./app/assets/images/icon-fc-512.webp --flavor user",
+    "android:apk:host:debug": "cd android && ./gradlew app:installHostDebug -x lint -x test --configure-on-demand --build-cache -PreactNativeDevServerPort=8081",
+    "android:apk:user:debug": "cd android && ./gradlew app:installUserDebug -x lint -x test --configure-on-demand --build-cache -PreactNativeDevServerPort=8081",
+    "android:apk:host:release:build": "cd android && ./gradlew app:assembleHostRelease --configure-on-demand --build-cache",
+    "android:apk:user:release:build": "cd android && ./gradlew app:assembleUserRelease --configure-on-demand --build-cache",
+    "android:apk:host:release:install": "cd android && ./gradlew app:installHostRelease --configure-on-demand --build-cache",
+    "android:apk:user:release:install": "cd android && ./gradlew app:installUserRelease --configure-on-demand --build-cache"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.2.0",
@@ -40,7 +48,8 @@
     "react-native-svg": "^15.13.0",
     "react-native-toast-message": "^2.3.3",
     "socket.io-client": "^4.8.1",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "expo-application": "~6.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

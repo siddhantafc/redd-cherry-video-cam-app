@@ -7,7 +7,7 @@ import { API_BASE_URL } from '@env';
 import { AuthStorage } from '../../../utils/authStorage';
 import { useWalletBalance } from '../../../contexts/WalletBalanceContext';
 import { useAuth } from '../../../contexts/AuthContext';
-import { Eye, EyeSlash } from 'phosphor-react-native';
+import { Eye, EyeSlash, UserPlus } from 'phosphor-react-native';
 import CopyrightFooter from '../../../components/common/CopyrightFooter';
 
 export default function LoginScreen({ navigation }) {
@@ -117,12 +117,21 @@ export default function LoginScreen({ navigation }) {
             <Text className="text-white text-lg font-semibold">Login</Text>
           )}
         </TouchableOpacity>
-        <TouchableOpacity
-          className="mt-6"
-          onPress={() => navigation.navigate('Signup')}
-        >
-          <Text className="text-primary text-base">Don't have an account? <Text className="underline">Sign up</Text></Text>
-        </TouchableOpacity>
+        <Text className="text-gray-600 mt-4">or</Text>
+        <View className="w-full mt-2 items-center">
+          <Text className="text-gray-600 mb-2">Don't have an account?</Text>
+          <TouchableOpacity
+            className="w-full bg-pink-600 py-3 rounded-xl items-center justify-center shadow-lg active:opacity-90 flex-row"
+            onPress={() => navigation.navigate('Signup')}
+            accessibilityRole="button"
+            accessibilityLabel="Create an account"
+          >
+            <UserPlus size={20} color="#fff" weight="fill" />
+            <View style={{ width: 8 }} />
+            <Text className="text-white text-lg font-semibold tracking-wide">Create your account</Text>
+          </TouchableOpacity>
+          <Text className="text-xs text-gray-400 mt-2">It's free and takes less than a minute</Text>
+        </View>
       </KeyboardAwareScrollView>
       <CopyrightFooter />
     </View>

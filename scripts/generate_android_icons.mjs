@@ -10,8 +10,9 @@ const iconSizes = {
   'mipmap-xxxhdpi': 192
 };
 
-async function generateIcons(inputPath) {
-  const androidResPath = path.resolve('./android/app/src/main/res');
+async function generateIcons(inputPath, { flavor } = {}) {
+  const baseResFolder = flavor ? `./android/app/src/${flavor}/res` : './android/app/src/main/res';
+  const androidResPath = path.resolve(baseResFolder);
   
   try {
     // Ensure the res directory exists
@@ -88,12 +89,29 @@ async function generateIcons(inputPath) {
 }
 
 // Get input file from command line arguments
-const inputFile = process.argv[2];
+const args = process.argv.slice(2);
+const inputFile = args[0];
+let flavorArg = null;
+for (let i = 1; i < args.length; i++) {
+  const a = args[i];
+  if (a === '--flavor' && args[i + 1]) {
+    flavorArg = args[i + 1];
+    i++;
+  } else if (a.startsWith('--flavor=')) {
+    flavorArg = a.split('=')[1];
+  }
+}
+
 if (!inputFile) {
   console.error('❌ Please provide an input image file path');
-  console.error('Usage: node generate_android_icons.mjs <input-image-path>');
+  console.error('Usage: node generate_android_icons.mjs <input-image-path> [--flavor host|user]');
   process.exit(1);
 }
 
-console.log(`🚀 Generating Android icons from: ${inputFile}`);
-generateIcons(inputFile);
+if (flavorArg && !['host', 'user', 'main'].includes(flavorArg)) {
+  console.error('❌ Invalid flavor. Use: host | user | main');
+  process.exit(1);
+}
+
+console.log(`🚀 Generating Android icons from: ${inputFile}${flavorArg ? ` (flavor: ${flavorArg})` : ''}`);
+generateIcons(inputFile, { flavor: flavorArg === 'main' ? null : flavorArg });
